@@ -34,11 +34,3 @@ jobs:
         with:
           name: plot-image
           path: plots/plot.png
-
-      - name: Post Plot to PR (if applicable)
-        env:
-          REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          echo "## Generated Plot" > report.md
-          echo "![](plots/plot.png)" >> report.md
-          cml comment create report.md
