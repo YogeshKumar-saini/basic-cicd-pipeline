@@ -35,10 +35,6 @@ jobs:
           name: plot-image
           path: plots/plot.png
 
-      - name: Setup CML
-        run: |
-          pip install cml
-
       - name: Post Plot to PR (if applicable)
         env:
           REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
